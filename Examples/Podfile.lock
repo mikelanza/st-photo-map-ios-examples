@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   STPhotoMap:
-    :commit: fe9a8bb40145d312715a9f9d0f71fc3920a15394
+    :commit: 45ec5d586fed1e3924c98ace23f729093dcb0647
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 SPEC CHECKSUMS:

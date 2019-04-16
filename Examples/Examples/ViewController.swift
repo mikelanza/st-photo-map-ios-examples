@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - STPhotoMapView datasource
+
+extension ViewController: STPhotoMapViewDataSource {
+    func photoMapView(_ view: STPhotoMapView?, photoTileOverlayModelForUrl url: String, parameters: [KeyValue]?) -> STPhotoTileOverlay.Model {
+        return STPhotoTileOverlay.Model(url: url, parameters: parameters)
+    }
+}
+
 // MARK: - Subviews configuration
 
 extension ViewController {
@@ -29,9 +37,7 @@ extension ViewController {
     }
     
     private func setupPhotoMapView() {
-        let photoMapView = STPhotoMapView()
-        let model = STPhotoTileOverlay.Model(url: "https://tilesdev.streetography.com/tile/%d/%d/%d.jpeg")
-        photoMapView.addTileOverlay(model: model)
+        let photoMapView = STPhotoMapView(dataSource: self)
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
