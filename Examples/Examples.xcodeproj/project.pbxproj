@@ -10,11 +10,13 @@
 		16F286BAF705B8C0B2FFFB30 /* Pods_ExamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEB339345243AD35E39C78A /* Pods_ExamplesUITests.framework */; };
 		85D57DC02265E7E400F4B333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DBF2265E7E400F4B333 /* AppDelegate.swift */; };
 		85D57DC22265E7E400F4B333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DC12265E7E400F4B333 /* ViewController.swift */; };
-		85D57DC52265E7E400F4B333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D57DC32265E7E400F4B333 /* Main.storyboard */; };
 		85D57DC72265E7E500F4B333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D57DC62265E7E500F4B333 /* Assets.xcassets */; };
 		85D57DCA2265E7E500F4B333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D57DC82265E7E500F4B333 /* LaunchScreen.storyboard */; };
 		85D57DD52265E7E500F4B333 /* ExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DD42265E7E500F4B333 /* ExamplesTests.swift */; };
 		85D57DE02265E7E500F4B333 /* ExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DDF2265E7E500F4B333 /* ExamplesUITests.swift */; };
+		85D57E012266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57E002266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift */; };
+		85D57E042266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57E032266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift */; };
+		85D57E072266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57E062266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift */; };
 		967BD4488DD6E2E041AE4EF2 /* Pods_ExamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B8E7414DB83EF80554CD39 /* Pods_ExamplesTests.framework */; };
 		A0A3AD2D1CB7519CCACEC08F /* Pods_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E2FD24BF64761464C2A5F7 /* Pods_Examples.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +46,6 @@
 		85D57DBC2265E7E400F4B333 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D57DBF2265E7E400F4B333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D57DC12265E7E400F4B333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		85D57DC42265E7E400F4B333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85D57DC62265E7E500F4B333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D57DC92265E7E500F4B333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85D57DCB2265E7E500F4B333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		85D57DDB2265E7E500F4B333 /* ExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D57DDF2265E7E500F4B333 /* ExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesUITests.swift; sourceTree = "<group>"; };
 		85D57DE12265E7E500F4B333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D57E002266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapWithoutFiltersViewController.swift; sourceTree = "<group>"; };
+		85D57E032266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapWithUserFilterViewController.swift; sourceTree = "<group>"; };
+		85D57E062266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapWithCollectionFilterViewController.swift; sourceTree = "<group>"; };
 		8EB975C99686A9EE00AE39B7 /* Pods-ExamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-ExamplesUITests/Pods-ExamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DBEB339345243AD35E39C78A /* Pods_ExamplesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamplesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B14304CB8375AEDF646B45 /* Pods-ExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplesTests.release.xcconfig"; path = "Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,9 +141,9 @@
 		85D57DBE2265E7E400F4B333 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				85D57DFE2266129200F4B333 /* Scenes */,
 				85D57DBF2265E7E400F4B333 /* AppDelegate.swift */,
 				85D57DC12265E7E400F4B333 /* ViewController.swift */,
-				85D57DC32265E7E400F4B333 /* Main.storyboard */,
 				85D57DC62265E7E500F4B333 /* Assets.xcassets */,
 				85D57DC82265E7E500F4B333 /* LaunchScreen.storyboard */,
 				85D57DCB2265E7E500F4B333 /* Info.plist */,
@@ -163,6 +167,40 @@
 				85D57DE12265E7E500F4B333 /* Info.plist */,
 			);
 			path = ExamplesUITests;
+			sourceTree = "<group>";
+		};
+		85D57DFE2266129200F4B333 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				85D57E052266145400F4B333 /* Photo Map With Collection Filter */,
+				85D57E022266134500F4B333 /* Photo Map With User Filter */,
+				85D57DFF226612FF00F4B333 /* Photo Map Without Filters */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		85D57DFF226612FF00F4B333 /* Photo Map Without Filters */ = {
+			isa = PBXGroup;
+			children = (
+				85D57E002266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift */,
+			);
+			path = "Photo Map Without Filters";
+			sourceTree = "<group>";
+		};
+		85D57E022266134500F4B333 /* Photo Map With User Filter */ = {
+			isa = PBXGroup;
+			children = (
+				85D57E032266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift */,
+			);
+			path = "Photo Map With User Filter";
+			sourceTree = "<group>";
+		};
+		85D57E052266145400F4B333 /* Photo Map With Collection Filter */ = {
+			isa = PBXGroup;
+			children = (
+				85D57E062266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift */,
+			);
+			path = "Photo Map With Collection Filter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +313,6 @@
 			files = (
 				85D57DCA2265E7E500F4B333 /* LaunchScreen.storyboard in Resources */,
 				85D57DC72265E7E500F4B333 /* Assets.xcassets in Resources */,
-				85D57DC52265E7E400F4B333 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D57DC22265E7E400F4B333 /* ViewController.swift in Sources */,
+				85D57E042266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift in Sources */,
+				85D57E012266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift in Sources */,
 				85D57DC02265E7E400F4B333 /* AppDelegate.swift in Sources */,
+				85D57E072266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +463,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		85D57DC32265E7E400F4B333 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85D57DC42265E7E400F4B333 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		85D57DC82265E7E500F4B333 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
