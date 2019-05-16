@@ -42,6 +42,7 @@ extension PhotoMapWithoutFiltersViewController: STPhotoMapViewDataSource {
 extension PhotoMapWithoutFiltersViewController {
     private func setupSubviews() {
         self.setupPhotoMapView()
+        self.setupNavigationBar()
     }
     
     private func setupPhotoMapView() {
@@ -49,6 +50,10 @@ extension PhotoMapWithoutFiltersViewController {
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 }
 

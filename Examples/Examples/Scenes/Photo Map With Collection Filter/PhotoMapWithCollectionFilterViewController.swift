@@ -44,6 +44,7 @@ extension PhotoMapWithCollectionFilterViewController: STPhotoMapViewDataSource {
 extension PhotoMapWithCollectionFilterViewController {
     private func setupSubviews() {
         self.setupPhotoMapView()
+        self.setupNavigationBar()
     }
     
     private func setupPhotoMapView() {
@@ -51,6 +52,10 @@ extension PhotoMapWithCollectionFilterViewController {
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.isTranslucent = false
     }
 }
 
