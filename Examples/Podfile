@@ -6,7 +6,7 @@ target 'Examples' do
   use_frameworks!
 
   # Pods for Examples
-  pod 'STPhotoMap', :git => 'https://github.com/mikelanza/st-photo-map-ios.git', :branch => 'develop'
+  pod 'STPhotoMap', :git => ’https://github.com/mikelanza/st-photo-map-ios.git'
 
   target 'ExamplesTests' do
     inherit! :search_paths

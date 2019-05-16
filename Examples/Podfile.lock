@@ -4,21 +4,20 @@ PODS:
   - STPhotoMap/Core (0.0.1)
 
 DEPENDENCIES:
-  - STPhotoMap (from `https://github.com/mikelanza/st-photo-map-ios.git`, branch `develop`)
+  - STPhotoMap (from `https://github.com/mikelanza/st-photo-map-ios.git`)
 
 EXTERNAL SOURCES:
   STPhotoMap:
-    :branch: develop
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 CHECKOUT OPTIONS:
   STPhotoMap:
-    :commit: 00d9b158779b29272077e3f1abc98f0d63afabb3
+    :commit: 76917ca39ac4935ec9cc33eb43d42bfc06c6434d
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 SPEC CHECKSUMS:
   STPhotoMap: ff254e5fd64612b7fcd78bd4f6fab0ab91440168
 
-PODFILE CHECKSUM: 47d1ca5cfd0391042249aa3fa456f8146b57cab6
+PODFILE CHECKSUM: b8b778982c9197b54bdf171245afc3f39818cbd0
 
 COCOAPODS: 1.7.0.beta.3
