@@ -3,10 +3,6 @@
 [![Platforms](https://img.shields.io/cocoapods/p/STPhotoMap-iOS-Examples.svg)](https://cocoapods.org/pods/STPhotoMap-iOS-Examples)
 [![License](https://img.shields.io/cocoapods/l/STPhotoMap-iOS-Examples.svg)](https://raw.githubusercontent.com/mikelanza/st-photo-map-ios-examples/master/LICENSE)
 
-[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/STPhotoMap-iOS-Examples.svg)](https://cocoapods.org/pods/STPhotoMap-iOS-Examples)
-
 [![Travis](https://img.shields.io/travis/mikelanza/st-photo-map-ios-examples/master.svg)](https://travis-ci.org/mikelanza/st-photo-map-ios-examples/branches)
 
 Examples on how to use the STPhotoMap framework
