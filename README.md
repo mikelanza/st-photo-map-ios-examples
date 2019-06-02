@@ -1,9 +1,6 @@
 # STPhotoMap - iOS Examples
 
-[![Platforms](https://img.shields.io/cocoapods/p/STPhotoMap-iOS-Examples.svg)](https://cocoapods.org/pods/STPhotoMap-iOS-Examples)
-[![License](https://img.shields.io/cocoapods/l/STPhotoMap-iOS-Examples.svg)](https://raw.githubusercontent.com/mikelanza/st-photo-map-ios-examples/master/LICENSE)
-
-[![Travis](https://img.shields.io/travis/mikelanza/st-photo-map-ios-examples/master.svg)](https://travis-ci.org/mikelanza/st-photo-map-ios-examples/branches)
+[![License](https://img.shields.io/cocoapods/l/STPhotoMap-iOS-Examples.svg)](https://github.com/mikelanza/st-photo-map-ios-examples/blob/master/LICENSE)
 
 Examples on how to use the STPhotoMap framework
 
