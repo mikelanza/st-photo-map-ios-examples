@@ -1,6 +1,6 @@
 # STPhotoMap - iOS Examples
 
-[![License](https://img.shields.io/cocoapods/l/STPhotoMap-iOS-Examples.svg)](https://github.com/mikelanza/st-photo-map-ios-examples/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mikelanza/st-photo-map-ios-examples/blob/master/LICENSE)
 
 Examples on how to use the STPhotoMap framework
 
