@@ -1,10 +1,16 @@
 PODS:
+  - Kingfisher (5.5.0)
   - STPhotoMap (0.0.1):
     - STPhotoMap/Core (= 0.0.1)
-  - STPhotoMap/Core (0.0.1)
+  - STPhotoMap/Core (0.0.1):
+    - Kingfisher (~> 5.0)
 
 DEPENDENCIES:
   - STPhotoMap (from `https://github.com/mikelanza/st-photo-map-ios.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   STPhotoMap:
@@ -12,11 +18,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   STPhotoMap:
-    :commit: 76917ca39ac4935ec9cc33eb43d42bfc06c6434d
+    :commit: 5c6b6d4d7eb4d2d566a350575bb3163fd251c0b6
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 SPEC CHECKSUMS:
-  STPhotoMap: ff254e5fd64612b7fcd78bd4f6fab0ab91440168
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  STPhotoMap: a6dec532e37354b5828ae2ce1121991e28e3d984
 
 PODFILE CHECKSUM: c910062fa1e9b7abc61da3793b41d6b61857716d
 
