@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		16F286BAF705B8C0B2FFFB30 /* Pods_ExamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEB339345243AD35E39C78A /* Pods_ExamplesUITests.framework */; };
+		284399A622AAA1AE0067DE16 /* PhotoMapWithDynamicFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399A522AAA1AE0067DE16 /* PhotoMapWithDynamicFiltersViewController.swift */; };
+		284399A922AAA27B0067DE16 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399A822AAA27B0067DE16 /* FiltersViewController.swift */; };
+		284399AB22AAA6480067DE16 /* FilterTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399AA22AAA6480067DE16 /* FilterTextFieldCell.swift */; };
+		284399AF22AAAA800067DE16 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399AE22AAAA800067DE16 /* Filter.swift */; };
+		284399B122AAAA990067DE16 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399B022AAAA990067DE16 /* FilterType.swift */; };
+		284399B322AAADD20067DE16 /* FilterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284399B222AAADD20067DE16 /* FilterKey.swift */; };
 		85D57DC02265E7E400F4B333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DBF2265E7E400F4B333 /* AppDelegate.swift */; };
 		85D57DC22265E7E400F4B333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D57DC12265E7E400F4B333 /* ViewController.swift */; };
 		85D57DC72265E7E500F4B333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D57DC62265E7E500F4B333 /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		284399A522AAA1AE0067DE16 /* PhotoMapWithDynamicFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapWithDynamicFiltersViewController.swift; sourceTree = "<group>"; };
+		284399A822AAA27B0067DE16 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		284399AA22AAA6480067DE16 /* FilterTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTextFieldCell.swift; sourceTree = "<group>"; };
+		284399AE22AAAA800067DE16 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		284399B022AAAA990067DE16 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		284399B222AAADD20067DE16 /* FilterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterKey.swift; sourceTree = "<group>"; };
 		2859615522A3E19300B37E52 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3619A65F40765EE7D1069A36 /* Pods-ExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37A0144527928C076DD52ED8 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +119,41 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		284399A422AAA19E0067DE16 /* Photo Map With Dynamic Filters */ = {
+			isa = PBXGroup;
+			children = (
+				284399A522AAA1AE0067DE16 /* PhotoMapWithDynamicFiltersViewController.swift */,
+			);
+			path = "Photo Map With Dynamic Filters";
+			sourceTree = "<group>";
+		};
+		284399A722AAA2700067DE16 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				284399A822AAA27B0067DE16 /* FiltersViewController.swift */,
+				284399AA22AAA6480067DE16 /* FilterTextFieldCell.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		284399AC22AAAA6C0067DE16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				284399AD22AAAA790067DE16 /* Filter */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		284399AD22AAAA790067DE16 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				284399AE22AAAA800067DE16 /* Filter.swift */,
+				284399B022AAAA990067DE16 /* FilterType.swift */,
+				284399B222AAADD20067DE16 /* FilterKey.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		406D4395A2336B911131029E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +189,7 @@
 		85D57DBE2265E7E400F4B333 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				284399AC22AAAA6C0067DE16 /* Models */,
 				85D57DFE2266129200F4B333 /* Scenes */,
 				85D57DBF2265E7E400F4B333 /* AppDelegate.swift */,
 				85D57DC12265E7E400F4B333 /* ViewController.swift */,
@@ -173,6 +221,8 @@
 		85D57DFE2266129200F4B333 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				284399A722AAA2700067DE16 /* Filters */,
+				284399A422AAA19E0067DE16 /* Photo Map With Dynamic Filters */,
 				85D57E052266145400F4B333 /* Photo Map With Collection Filter */,
 				85D57E022266134500F4B333 /* Photo Map With User Filter */,
 				85D57DFF226612FF00F4B333 /* Photo Map Without Filters */,
@@ -427,8 +477,14 @@
 			files = (
 				85D57DC22265E7E400F4B333 /* ViewController.swift in Sources */,
 				85D57E042266135A00F4B333 /* PhotoMapWithUserFilterViewController.swift in Sources */,
+				284399A922AAA27B0067DE16 /* FiltersViewController.swift in Sources */,
+				284399AB22AAA6480067DE16 /* FilterTextFieldCell.swift in Sources */,
 				85D57E012266130F00F4B333 /* PhotoMapWithoutFiltersViewController.swift in Sources */,
+				284399B122AAAA990067DE16 /* FilterType.swift in Sources */,
+				284399B322AAADD20067DE16 /* FilterKey.swift in Sources */,
 				85D57DC02265E7E400F4B333 /* AppDelegate.swift in Sources */,
+				284399A622AAA1AE0067DE16 /* PhotoMapWithDynamicFiltersViewController.swift in Sources */,
+				284399AF22AAAA800067DE16 /* Filter.swift in Sources */,
 				85D57E072266146500F4B333 /* PhotoMapWithCollectionFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

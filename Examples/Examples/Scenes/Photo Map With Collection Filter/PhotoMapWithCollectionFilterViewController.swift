@@ -10,7 +10,6 @@ import UIKit
 import STPhotoMap
 
 class PhotoMapWithCollectionFilterViewController: UIViewController {
-    
     private weak var photoMapView: STPhotoMapView?
     
     init() {

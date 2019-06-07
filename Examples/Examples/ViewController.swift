@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import STPhotoMap
 
 class ViewController: UIViewController {
-    
     private weak var tableView: UITableView?
     private var examples = [Example]()
     
     enum Example: String {
         case photoMapWithoutFilters = "Photo Map Without Filters"
+        case photoMapWithDynamicFilters = "Photo Map With Dynamic Filters"
         case photoMapWithUserFilter = "Photo Map With User Filter"
         case photoMapWithCollectionFilter = "Photo Map With Collection Filter"
     }
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     func setupExamples() {
-        self.examples = [.photoMapWithoutFilters, .photoMapWithUserFilter, .photoMapWithCollectionFilter]
+        self.examples = [.photoMapWithoutFilters, .photoMapWithDynamicFilters, .photoMapWithUserFilter, .photoMapWithCollectionFilter]
     }
 }
 
@@ -46,21 +45,25 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewControllerToPush: UIViewController
+        
         let example = self.examples[indexPath.row]
         switch example {
             case .photoMapWithoutFilters:
-                let viewController = PhotoMapWithoutFiltersViewController()
-                self.navigationController?.pushViewController(viewController, animated: true)
+                viewControllerToPush = PhotoMapWithoutFiltersViewController()
+                break
+            case .photoMapWithDynamicFilters:
+                viewControllerToPush = PhotoMapWithDynamicFiltersViewController()
                 break
             case .photoMapWithUserFilter:
-                let viewController = PhotoMapWithUserFilterViewController()
-                self.navigationController?.pushViewController(viewController, animated: true)
+                viewControllerToPush = PhotoMapWithUserFilterViewController()
                 break
             case .photoMapWithCollectionFilter:
-                let viewController = PhotoMapWithCollectionFilterViewController()
-                self.navigationController?.pushViewController(viewController, animated: true)
+                viewControllerToPush = PhotoMapWithCollectionFilterViewController()
                 break
         }
+        
+        self.navigationController?.pushViewController(viewControllerToPush, animated: true)
     }
 }
 
@@ -111,5 +114,3 @@ extension ViewController {
         self.tableView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
 }
-
-
