@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    private weak var tableView: UITableView?
+class ViewController: UITableViewController {
     private var examples = [Example]()
     
     enum Example: String {
@@ -29,11 +28,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupSubviews()
-        self.setupSubviewsConstraints()
-        
         self.setupExamples()
+        self.clearsSelectionOnViewWillAppear = true
     }
     
     func setupExamples() {
@@ -43,8 +40,8 @@ class ViewController: UIViewController {
 
 // MARK: - Table view delegate
 
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension ViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewControllerToPush: UIViewController
         
         let example = self.examples[indexPath.row]
@@ -69,12 +66,12 @@ extension ViewController: UITableViewDelegate {
 
 // MARK: - Table view data source
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.examples.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let example = self.examples[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = example.rawValue
@@ -90,27 +87,6 @@ extension ViewController {
     }
     
     private func setupTableView() {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        tableView.dataSource = self
-        tableView.delegate = self
-        self.view.addSubview(tableView)
-        self.tableView = tableView
-    }
-}
-
-// MARK: - Constraints configuration
-
-extension ViewController {
-    private func setupSubviewsConstraints() {
-        self.setupTableViewConstraints()
-    }
-    
-    private func setupTableViewConstraints() {
-        self.tableView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.tableView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.tableView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.tableView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
 }

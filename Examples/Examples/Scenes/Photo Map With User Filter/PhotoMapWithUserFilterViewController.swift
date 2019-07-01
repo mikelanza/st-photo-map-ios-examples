@@ -22,19 +22,8 @@ class PhotoMapWithUserFilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupSubviews()
         self.setupSubviewsConstraints()
-    }
-}
-
-// MARK: - STPhotoMapView datasource
-
-extension PhotoMapWithUserFilterViewController: STPhotoMapViewDataSource {
-    func photoMapView(_ view: STPhotoMapView?, photoTileOverlayModelForUrl url: String, parameters: [KeyValue]?) -> STPhotoTileOverlay.Model {
-        var newParameters = parameters
-        newParameters?.append(("userId", "z5YglYLZ55"))
-        return STPhotoTileOverlay.Model(url: url, parameters: newParameters)
     }
 }
 
@@ -47,8 +36,10 @@ extension PhotoMapWithUserFilterViewController {
     }
     
     private func setupPhotoMapView() {
-        let photoMapView = STPhotoMapView(dataSource: self)
+        let photoMapView = STPhotoMapView()
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
+        photoMapView.resetParameters()
+        photoMapView.updateParameter(parameter: ("userId", "TXwEoa15xF"))
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
     }

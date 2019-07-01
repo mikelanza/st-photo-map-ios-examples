@@ -23,7 +23,6 @@ class PhotoMapWithDynamicFiltersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupSubviews()
         self.setupSubviewsConstraints()
         
@@ -38,14 +37,6 @@ class PhotoMapWithDynamicFiltersViewController: UIViewController {
     }
 }
 
-// MARK: - STPhotoMapView datasource
-
-extension PhotoMapWithDynamicFiltersViewController: STPhotoMapViewDataSource {
-    func photoMapView(_ view: STPhotoMapView?, photoTileOverlayModelForUrl url: String, parameters: [KeyValue]?) -> STPhotoTileOverlay.Model {
-        return STPhotoTileOverlay.Model(url: url, parameters: parameters)
-    }
-}
-
 // MARK: - Filters view controller delegate
 
 extension PhotoMapWithDynamicFiltersViewController: FiltersViewControllerDelegate {
@@ -56,8 +47,9 @@ extension PhotoMapWithDynamicFiltersViewController: FiltersViewControllerDelegat
                 self.photoMapView?.updateParameter(parameter: (filter.key.rawValue, value))
             }
         }
-        self.photoMapView?.reloadTiles()
-        self.photoMapView?.reloadCarouselOverlays()
+        self.photoMapView?.setNeedsDisplayTiles()
+        self.photoMapView?.reloadCarousel()
+        self.photoMapView?.reloadLocationLevel()
     }
 }
 
@@ -81,7 +73,8 @@ extension PhotoMapWithDynamicFiltersViewController {
     }
     
     private func setupPhotoMapView() {
-        let photoMapView = STPhotoMapView(dataSource: self)
+        let photoMapView = STPhotoMapView()
+        photoMapView.resetParameters()
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView

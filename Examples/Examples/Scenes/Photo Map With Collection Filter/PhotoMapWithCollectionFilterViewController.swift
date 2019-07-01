@@ -22,19 +22,8 @@ class PhotoMapWithCollectionFilterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupSubviews()
         self.setupSubviewsConstraints()
-    }
-}
-
-// MARK: - STPhotoMapView datasource
-
-extension PhotoMapWithCollectionFilterViewController: STPhotoMapViewDataSource {
-    func photoMapView(_ view: STPhotoMapView?, photoTileOverlayModelForUrl url: String, parameters: [KeyValue]?) -> STPhotoTileOverlay.Model {
-        var newParameters = parameters
-        newParameters?.append(("collectionId", "47fe52b7d8"))
-        return STPhotoTileOverlay.Model(url: url, parameters: newParameters)
     }
 }
 
@@ -47,8 +36,10 @@ extension PhotoMapWithCollectionFilterViewController {
     }
     
     private func setupPhotoMapView() {
-        let photoMapView = STPhotoMapView(dataSource: self)
+        let photoMapView = STPhotoMapView()
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
+        photoMapView.resetParameters()
+        photoMapView.updateParameter(parameter: ("collectionId", "47fe52b7d8"))
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
     }

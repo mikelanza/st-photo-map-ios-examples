@@ -22,17 +22,8 @@ class PhotoMapWithoutFiltersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupSubviews()
         self.setupSubviewsConstraints()
-    }
-}
-
-// MARK: - STPhotoMapView datasource
-
-extension PhotoMapWithoutFiltersViewController: STPhotoMapViewDataSource {
-    func photoMapView(_ view: STPhotoMapView?, photoTileOverlayModelForUrl url: String, parameters: [KeyValue]?) -> STPhotoTileOverlay.Model {
-        return STPhotoTileOverlay.Model(url: url, parameters: parameters)
     }
 }
 
@@ -45,7 +36,8 @@ extension PhotoMapWithoutFiltersViewController {
     }
     
     private func setupPhotoMapView() {
-        let photoMapView = STPhotoMapView(dataSource: self)
+        let photoMapView = STPhotoMapView()
+        photoMapView.resetParameters()
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
         self.photoMapView = photoMapView
