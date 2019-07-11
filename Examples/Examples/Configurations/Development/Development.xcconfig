@@ -1,0 +1,25 @@
+//
+//  Development.xcconfig
+//  Examples
+//
+//  Created by Dimitri Strauneanu on 09/07/2019.
+//  Copyright © 2019 Streetography. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Examples/Pods-Examples.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-Examples/Pods-Examples.release (development).xcconfig"
+#include "Pods/Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-ExamplesTests/Pods-ExamplesTests.release (development).xcconfig"
+#include "Pods/Target Support Files/Pods-ExamplesUITests/Pods-ExamplesUITests.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-ExamplesUITests/Pods-ExamplesUITests.release (development).xcconfig"
+
+GET_PHOTO_URL = https:/$()/prod.streetography.com/v1/photos/%@
+BBOXMONGO_URL = https:/$()/tilesdev.streetography.com/bboxmongo
+TILES_GEOJSON_URL = https:/$()/tilesdev.streetography.com/tile/%d/%d/%d.geojson
+TILES_JPEG_URL = https:/$()/tilesdev.streetography.com/tile/%d/%d/%d.jpeg
+
+APP_NAME = Examples (dev)
+APP_BUNDLE_ID = com.streetography.st.photo.map.ios.Examples.dev
