@@ -25,18 +25,33 @@ class PhotoMapWithoutFiltersViewController: UIViewController {
         self.setupSubviews()
         self.setupSubviewsConstraints()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 // MARK: - Subviews configuration
 
 extension PhotoMapWithoutFiltersViewController {
     private func setupSubviews() {
+        self.setupView()
         self.setupPhotoMapView()
         self.setupNavigationBar()
     }
     
+    private func setupView() {
+        self.view.backgroundColor = UIColor(red: 53/255, green: 61/255, blue: 75/255, alpha: 1)
+    }
+    
     private func setupPhotoMapView() {
         let photoMapView = STPhotoMapView()
+        photoMapView.viewController = self
         photoMapView.resetParameters()
         photoMapView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(photoMapView)
@@ -45,6 +60,11 @@ extension PhotoMapWithoutFiltersViewController {
     
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 53/255, green: 61/255, blue: 75/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }
 
@@ -56,10 +76,10 @@ extension PhotoMapWithoutFiltersViewController {
     }
     
     private func setupPhotoMapViewConstraints() {
-        self.photoMapView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.photoMapView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.photoMapView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.photoMapView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.photoMapView?.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        self.photoMapView?.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        self.photoMapView?.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        self.photoMapView?.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
     }
 }
 

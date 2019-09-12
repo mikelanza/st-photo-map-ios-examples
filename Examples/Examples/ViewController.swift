@@ -33,6 +33,10 @@ class ViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = true
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func setupExamples() {
         self.examples = [.photoMapWithoutFilters, .photoMapWithDynamicFilters, .photoMapWithUserFilter, .photoMapWithCollectionFilter]
     }
@@ -83,10 +87,20 @@ extension ViewController {
 
 extension ViewController {
     private func setupSubviews() {
+        self.setupNavigationBar()
         self.setupTableView()
     }
     
     private func setupTableView() {
         self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 53/255, green: 61/255, blue: 75/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }
