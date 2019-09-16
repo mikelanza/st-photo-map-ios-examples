@@ -1,26 +1,26 @@
 PODS:
   - Kingfisher (5.7.1)
-  - STPhotoCollection (0.1.1):
-    - STPhotoCollection/Core (= 0.1.1)
-  - STPhotoCollection/Core (0.1.1):
-    - STPhotoCore (~> 0.1.3)
-  - STPhotoCore (0.1.3):
-    - STPhotoCore/Core (= 0.1.3)
-  - STPhotoCore/Core (0.1.3)
-  - STPhotoDetails (0.0.9):
-    - STPhotoDetails/Core (= 0.0.9)
-  - STPhotoDetails/Core (0.0.9):
-    - STPhotoCore (~> 0.1.3)
-  - STPhotoMap (0.1.2):
-    - STPhotoMap/Core (= 0.1.2)
-  - STPhotoMap/Core (0.1.2):
+  - STPhotoCollection (0.1.2):
+    - STPhotoCollection/Core (= 0.1.2)
+  - STPhotoCollection/Core (0.1.2):
+    - STPhotoCore (~> 0.1.4)
+  - STPhotoCore (0.1.4):
+    - STPhotoCore/Core (= 0.1.4)
+  - STPhotoCore/Core (0.1.4)
+  - STPhotoDetails (0.1.0):
+    - STPhotoDetails/Core (= 0.1.0)
+  - STPhotoDetails/Core (0.1.0):
+    - STPhotoCore (~> 0.1.4)
+  - STPhotoMap (0.1.3):
+    - STPhotoMap/Core (= 0.1.3)
+  - STPhotoMap/Core (0.1.3):
     - Kingfisher (~> 5.0)
-    - STPhotoCollection (~> 0.1.1)
-    - STPhotoCore (~> 0.1.3)
-    - STPhotoDetails (~> 0.0.9)
+    - STPhotoCollection (~> 0.1.2)
+    - STPhotoCore (~> 0.1.4)
+    - STPhotoDetails (~> 0.1.0)
 
 DEPENDENCIES:
-  - STPhotoMap (from `https://github.com/mikelanza/st-photo-map-ios.git`, commit `6e56010`)
+  - STPhotoMap (from `https://github.com/mikelanza/st-photo-map-ios.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -32,21 +32,20 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   STPhotoMap:
-    :commit: '6e56010'
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 CHECKOUT OPTIONS:
   STPhotoMap:
-    :commit: '6e56010'
+    :commit: a90f8af1afa41cf2e24e01dd087e5a469230b033
     :git: https://github.com/mikelanza/st-photo-map-ios.git
 
 SPEC CHECKSUMS:
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
-  STPhotoCollection: cc713d21b29350705991a0e191fad4caca8c89d0
-  STPhotoCore: 2aae72a369d51f2192c1918db649c4a872451d6b
-  STPhotoDetails: 654f3b73f22b92b8041f02c0a8747f5403ffa1ee
-  STPhotoMap: 94c382ae58bd86e515595b43109bc7f7cb6dc134
+  STPhotoCollection: f4a14bfe0ef9db2cc432dfa78a4be48b6cfa260b
+  STPhotoCore: e19e06b105d250eccc370e9fb1bed231d3c84d00
+  STPhotoDetails: 98985874b26d913741f63fc37571800fceabcb83
+  STPhotoMap: 4e11fe5b3761bd0bae867db2aa4d57f98ec109aa
 
-PODFILE CHECKSUM: a4cf4cdab7a5eed21ddf91344c3826e1b2a09840
+PODFILE CHECKSUM: 46336be372978e77e147622a173a5fb56f7fd05b
 
 COCOAPODS: 1.7.0.beta.3
